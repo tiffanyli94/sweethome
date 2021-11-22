@@ -1,5 +1,11 @@
 public class Test {
     public static void main(String[] args) {
+        // 11/21.  Queue and Stack practices
+        QueueAndStackTest();
+
+    }
+
+    public static void QueueAndStackTest() {
         // Stack test case
         Stack testStack = new Stack();
         testStack.push(5);
