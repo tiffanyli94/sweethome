@@ -4,6 +4,26 @@ public class Test {
 //        QueueAndStackTest();
         // 11/22.  Binary Search
         BinarySearchTest();
+        //11/30 test case closest in sorted array
+        testClosestInSortedArray();
+    }
+
+    public static void testClosestInSortedArray() {
+        int[] testArray = new int[]{1, 2, 3, 7, 8};
+        int target = 4;
+        System.out.println(ClosetInSortedArray.closetInSortedArray(testArray, target));
+        int[] testArray2 = new int[]{0};
+        int target2 = 4;
+        System.out.println(ClosetInSortedArray.closetInSortedArray(testArray2, target2));
+        int[] testArray3 = new int[]{0, 1};
+        int target3 = 4;
+        System.out.println(ClosetInSortedArray.closetInSortedArray(testArray3, target3));
+        int[] testArray4 = new int[]{};
+        int target4 = 4;
+        System.out.println(ClosetInSortedArray.closetInSortedArray(testArray4, target4));
+        int[] testArray5 = new int[]{1,2,3,4};
+        int target5 = 4;
+        System.out.println(ClosetInSortedArray.closetInSortedArray(testArray5, target5));
     }
 
     public static void BinarySearchTest() {
