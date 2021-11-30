@@ -1,7 +1,12 @@
 public class Test {
     public static void main(String[] args) {
         // 11/21.  Queue and Stack practices
-        QueueAndStackTest();
+//        QueueAndStackTest();
+        // 11/22.  Binary Search
+        BinarySearchTest();
+    }
+
+    public static void BinarySearchTest() {
 
     }
 
