@@ -3,7 +3,7 @@ public class Tree {
         TreeNode root = new TreeNode(1);
         System.out.println(isBalanced(root));
     }
-    private boolean isBalanced(TreeNode root) {
+    private static boolean isBalanced(TreeNode root) {
         //corner case
         if (root == null) {
             return true;
@@ -18,7 +18,7 @@ public class Tree {
 
     }
 
-    private int getHeight(TreeNode root) {
+    private static int getHeight(TreeNode root) {
         //corner case
         if (root == null) {
             return 0;
