@@ -7,9 +7,22 @@ public class Test {
         //11/30 test case closest in sorted array
 //        testClosestInSortedArray();
         //12/2 test case for findRange
-        testFindRange();
+//        testFindRange();
+        //12/3 test case for kthClosest
+        testKthBS();
+
     }
 
+    public static void testKthBS()
+    {
+        int[] nums= new int[]{1, 2, 4, 4, 4, 5, 9};
+        int target = 4;
+        int k = 2;
+        int[] result = KthClosestBS.kthClosestBS(nums, target, k);
+        for (int j = 0; j < result.length; j++) {
+            System.out.println(result[j]);
+        }
+    }
     public static void testFindRange() {
         int[] nums= new int[]{1, 2, 4, 4, 4, 5, 9};
         int target = 4;
