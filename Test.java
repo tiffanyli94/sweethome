@@ -3,9 +3,21 @@ public class Test {
         // 11/21.  Queue and Stack practices
 //        QueueAndStackTest();
         // 11/22.  Binary Search
-        BinarySearchTest();
+//        BinarySearchTest();
         //11/30 test case closest in sorted array
-        testClosestInSortedArray();
+//        testClosestInSortedArray();
+        //12/2 test case for findRange
+        testFindRange();
+    }
+
+    public static void testFindRange() {
+        int[] nums= new int[]{1, 2, 4, 4, 4, 5, 9};
+        int target = 4;
+        SearchRange searchRangeTest = new SearchRange();
+        int[] result = searchRangeTest.searchRange(nums, target);
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i]);
+        }
     }
 
     public static void testClosestInSortedArray() {
@@ -24,10 +36,6 @@ public class Test {
         int[] testArray5 = new int[]{1,2,3,4};
         int target5 = 4;
         System.out.println(ClosetInSortedArray.closetInSortedArray(testArray5, target5));
-    }
-
-    public static void BinarySearchTest() {
-
     }
 
     public static void QueueAndStackTest() {
