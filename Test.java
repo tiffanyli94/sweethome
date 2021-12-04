@@ -9,8 +9,10 @@ public class Test {
         //12/2 test case for findRange
 //        testFindRange();
         //12/3 test case for kthClosest
-        testKthBS();
+//        testKthBS();
 
+        //12/04 findSubsets - maxgu
+        FindSubset.printAllSubsets(new char[]{'a', 'b', 'c'});
     }
 
     public static void testKthBS()
