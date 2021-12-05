@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Test {
     public static void main(String[] args) {
         // 11/21.  Queue and Stack practices
@@ -11,8 +13,91 @@ public class Test {
         //12/3 test case for kthClosest
 //        testKthBS();
 
-        //12/04 findSubsets - maxgu
-        FindSubset.printAllSubsets(new char[]{'a', 'b', 'c'});
+        //12/04 findSubsets - maxGu
+//        FindSubset.printAllSubsets(new char[]{'a', 'b', 'c'});
+
+     //12/05
+        // testGraphTraversalTree();
+    //12/05
+      //  testPrintNeighbors();
+        GraphNode root = constructGraph();
+        levelPrintGraph(root);
+    }
+
+    private static void levelPrintGraph(GraphNode root) {
+        //null check
+        if (root == null) {
+            return;
+        }
+        //construct visited Map
+        Map<Integer, Boolean> visited = new HashMap<>();
+        //construct a queue and set parameters
+        Queue<GraphNode> q = new LinkedList<>();
+        q.offer(root);
+        visited.put(root.value, true);
+        int length = q.size();
+        //traverse map using queue
+        while (!q.isEmpty()){
+            GraphNode cur = q.poll();
+            System.out.print(cur.value);
+            length--;
+            for (Map.Entry<Integer, GraphNode> entry : cur.neighbors.entrySet()) {
+                if (visited.containsKey(entry.getKey())) {
+                  continue;
+                }
+                q.offer(entry.getValue());
+                visited.put(entry.getValue().value, true);
+            }
+            if (length == 0) {
+                System.out.println(" ");
+                length = q.size();
+            }
+        }
+    }
+
+    public static void testPrintNeighbors(){
+        GraphNode root = constructGraph();
+        root.printNeighbors();
+    }
+
+    public static GraphNode constructGraph() {
+        GraphNode node1 = new GraphNode(1);
+        GraphNode node2 = new GraphNode(2);
+        GraphNode node3 = new GraphNode(3);
+        GraphNode node4 = new GraphNode(4);
+        GraphNode node5 = new GraphNode(5);
+        node1.neighbors.put(2, node2);
+        node1.neighbors.put(3, node3);
+        node1.neighbors.put(4, node4);
+        node2.neighbors.put(1, node1);
+        node2.neighbors.put(5, node5);
+        node3.neighbors.put(1, node1);
+        node3.neighbors.put(5, node5);
+        node3.neighbors.put(4, node4);
+        node4.neighbors.put(1, node1);
+        node4.neighbors.put(3, node3);
+        node5.neighbors.put(2, node2);
+        node5.neighbors.put(3, node3);
+        return node1;
+    }
+
+    public static void testGraphTraversalTree () {
+        //12/05 build tree
+        TreeNode root = constructTree();
+        //   GraphTraversal.graphTraversal(root);
+        List<Integer> res = GraphTraversal.getLevelSum(root);
+        System.out.println(res);
+    }
+
+    public static TreeNode constructTree() {
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode (2);
+        root.right = new TreeNode(7);
+        root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(3);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(8);
+        return root;
     }
 
     public static void testKthBS()
@@ -68,7 +153,7 @@ public class Test {
         System.out.println(b);
 
         // Queue test case
-        Queue testQ = new Queue();
+        PracticeQueue testQ = new PracticeQueue();
         testQ.offer(1);
         testQ.offer(2);
         testQ.offer(3);
