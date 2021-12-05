@@ -1,4 +1,4 @@
-public class Queue {
+public class PracticeQueue {
     private int size;
     private ListNode tail;
     private ListNode head;

@@ -1,12 +1,12 @@
 public class FindSubset {
     public static void printAllSubsets(char[] input) {
-        findSubset(input, 0, "");
+        findSubset(input, 0, new StringBuilder());
     }
 
-    private static void findSubset(char[] input, int index, String prefix) {
+    private static void findSubset(char[] input, int index, StringBuilder prefix) {
         //base case
         if (index == input.length) {
-            System.out.println(prefix);
+            System.out.println(prefix.toString());
             return;
         }
 
@@ -23,7 +23,7 @@ public class FindSubset {
         for (int i = 0; i < children.length; i++) {
             prefix.append(children[i]);
             findSubset(input, index + 1, prefix);
-            prefix.deleteCharAt(prefix.length - 1);
+            prefix.deleteCharAt(prefix.length() - 1);
         }
 
 
