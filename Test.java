@@ -20,8 +20,17 @@ public class Test {
         // testGraphTraversalTree();
     //12/05
       //  testPrintNeighbors();
-        GraphNode root = constructGraph();
-        levelPrintGraph(root);
+//        GraphNode root = constructGraph();
+//        levelPrintGraph(root);
+        testTopKWords();
+    }
+
+    private static void testTopKWords() {
+        String[] s = new String[]{"a", "b", "c", "b", "a", "a", "c", "c", "c"};
+        String[] result = TopKWords.topKWords(s ,2);
+        for (String s1 : result) {
+            System.out.println(s1);
+        }
     }
 
     private static void levelPrintGraph(GraphNode root) {
