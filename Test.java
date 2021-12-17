@@ -22,7 +22,28 @@ public class Test {
       //  testPrintNeighbors();
 //        GraphNode root = constructGraph();
 //        levelPrintGraph(root);
-        testTopKWords();
+//        testTopKWords();
+
+       // testRemoveChar();
+        //testRemoveDuplicate();
+        testSubString();
+
+    }
+
+    private static void testSubString() {
+        String one = "helloworld";
+        String two = "low";
+        System.out.print(Substring.substring(one, two));
+    }
+
+    private static void testRemoveDuplicate() {
+        String a = "aaabbbbbbcccccddddd";
+        System.out.print(RemoveDuplicate.removeDuplicate(a));
+    }
+    private static void testRemoveChar() {
+        String a = "student";
+        char[] targets = {'u', 'e'};
+        System.out.println(RemoveChar.removeChar(a, targets));
     }
 
     private static void testTopKWords() {
@@ -51,6 +72,7 @@ public class Test {
             System.out.print(cur.value);
             length--;
             for (Map.Entry<Integer, GraphNode> entry : cur.neighbors.entrySet()) {
+
                 if (visited.containsKey(entry.getKey())) {
                   continue;
                 }
