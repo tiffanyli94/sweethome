@@ -3,14 +3,14 @@ public class ReverseEachWord {
         if (input == null) {
             return;
         }
-        int i = 0;
-        for (int j = 0; j < input.length; j++) {
-            if (input[j] != ' ') {
-                continue;
+        int start = 0;
+        ReverseWords.reverseWord(input, start, input.length - 1);
+        for (int i = 0; i < input.length; i++) {
+            if (input[i] != ' ' && (i == 0 || input[i - 1] == ' ')) {
+                start = i;
             }
-            if (input[j] == ' ') {
-                ReverseWords.reverseWord(input, i, j - 1);
-                i = j;
+            if (input[i] != ' ' && (i == input.length - 1 || input[i + 1] == ' ')) {
+                ReverseWords.reverseWord(input, start, i );
             }
         }
     }
