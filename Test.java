@@ -26,8 +26,26 @@ public class Test {
 
        // testRemoveChar();
         //testRemoveDuplicate();
-        testSubString();
+        //testSubString();
+       // testReverseWords();
+        testReverseEach();
 
+    }
+
+    private static void testReverseEach() {
+        char[] test = {'h', 'i', ' ', 'm', 'y', ' ', 'd', 'o', 'g'};
+        ReverseEachWord.reverseEachWord(test);
+        for (int i = 0; i < test.length; i++) {
+            System.out.print(test[i]);
+        }
+    }
+
+    private static void testReverseWords() {
+        char[] test = {'a', 'b', 'c', 'd', 'e', 'f'};
+        ReverseWords.reverseWord(test, 2, 4);
+        for (int i = 0; i < test.length; i++) {
+            System.out.print(test[i]);
+        }
     }
 
     private static void testSubString() {
