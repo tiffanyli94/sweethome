@@ -17,6 +17,19 @@ public class BoggleBoard {
 
     private DictionaryNode generateDictionaryTree(String[] Dictionary) {
 
+        dictionaryRoot = new DictionaryNode(' ');
+
+        for (String word : Dictionary) {
+            char[] chars = word.toCharArray();
+            DictionaryNode cur = dictionaryRoot;
+            for (char c : chars) {
+                if (!cur.children.containsKey(c)){
+                    cur.children.put(c, new DictionaryNode(c));
+                }
+                cur = cur.children.get(c);
+            }
+        }
+
     }
 
 }
