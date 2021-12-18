@@ -27,7 +27,6 @@ public class Test {
        // testRemoveChar();
         //testRemoveDuplicate();
         testSubString();
-
     }
 
     private static void testSubString() {
