@@ -4,29 +4,31 @@ public class BoggleBoard {
     DictionaryNode dictionaryRoot;
 
     //constructor
-    public BoggleBoard(char[][] BoggleBoard, String[] Dictionary) {
-        dictionaryRoot = generateDictionaryTree(Dictionary);
-
+    public BoggleBoard(char[][] boggleBoard, String[] dictionary) {
+        generateDictionaryTree(dictionary);
+        dictionaryRoot.print();
     }
 
     //return all words in Boggle Board
-    public List<String> getAllWords( ) {
-        
+   // public List<String> getAllWords( ) {
+    // }
 
-    }
-
-    private DictionaryNode generateDictionaryTree(String[] Dictionary) {
+    private void generateDictionaryTree(String[] Dictionary) {
 
         dictionaryRoot = new DictionaryNode(' ');
 
         for (String word : Dictionary) {
             char[] chars = word.toCharArray();
-            DictionaryNode cur = dictionaryRoot;
-            for (char c : chars) {
-                if (!cur.children.containsKey(c)){
-                    cur.children.put(c, new DictionaryNode(c));
+            DictionaryNode parent = dictionaryRoot;
+            for (int i = 0; i < chars.length; i++) {
+                if (!parent.children.containsKey(chars[i])){
+                    parent.children.put(chars[i], new DictionaryNode(chars[i]));
                 }
-                cur = cur.children.get(c);
+                if (i == chars.length - 1) {
+                    parent.children.get(chars[i]).isEndOfWord = true;
+                }
+                parent = parent.children.get(chars[i]);
+
             }
         }
 

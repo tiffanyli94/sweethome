@@ -6,6 +6,7 @@ import java.util.Queue;
 public class DictionaryNode {
     char value;
     Map<Character, DictionaryNode> children;
+    boolean isEndOfWord;
 
     //constructor
     public DictionaryNode(char curChar) {
@@ -21,6 +22,9 @@ public class DictionaryNode {
         while (!q.isEmpty()) {
             DictionaryNode cur = q.poll();
             System.out.print(cur.value);
+            if (cur.isEndOfWord) {
+                System.out.print("*");
+            }
             levelRemainingCount--;
 
             for (Map.Entry<Character, DictionaryNode> childEntry : cur.children.entrySet()) {
