@@ -26,7 +26,20 @@ public class Test {
 
        // testRemoveChar();
         //testRemoveDuplicate();
-        testSubString();
+       // testSubString();
+        testNQueen();
+
+    }
+
+    private static void testNQueen() {
+        List<List<Integer>> solution = NQueen.NQueen(8);
+        for (int i = 0; i < solution.size(); i++) {
+            for (int j = 0; j < solution.get(i).size(); j++) {
+                System.out.print(solution.get(i).get(j));
+            }
+            System.out.println(" ");
+        }
+
 
     }
 
