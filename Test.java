@@ -25,9 +25,14 @@ public class Test {
 //        testTopKWords();
 
        // testRemoveChar();
-        //testRemoveDuplicate();
-        testSubString();
+        // testRemoveDuplicate();
+        // testSubString();
+        testBoggleBoardPrint();
+    }
 
+    private static void testBoggleBoardPrint() {
+        String[] test = new String[]{"red", "reddish", "yellow", "rest"};
+        BoggleBoard testBoard = new BoggleBoard(null,test);
     }
 
     private static void testSubString() {
