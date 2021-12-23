@@ -27,8 +27,27 @@ public class Test {
        // testRemoveChar();
         //testRemoveDuplicate();
        // testSubString();
-        testNQueen();
+        // testNQueen();
 
+       //testFib();
+        testFib4();
+
+
+    }
+    private static void testFib4() {
+        int i = 10;
+        System.out.print(Fib.getFib4(i));
+    }
+
+    private static void testFib3() {
+        int i = 10;
+        System.out.print(Fib.getFib3(i));
+    }
+
+    private static void testFib() {
+        int i = 10;
+        int[] m = new int[i + 1];
+        System.out.println(Fib.getFib2(i, m));
     }
 
     private static void testNQueen() {
