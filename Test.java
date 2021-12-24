@@ -30,8 +30,14 @@ public class Test {
         // testNQueen();
 
        //testFib();
-        testFib4();
+//        testFib4();
+        testCuttingRope();
 
+    }
+
+    private static void testCuttingRope() {
+        int i = 6;
+        System.out.print(CuttingRope.getMaxProduct(i));
 
     }
     private static void testFib4() {
