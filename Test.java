@@ -31,8 +31,18 @@ public class Test {
 
        //testFib();
 //        testFib4();
-        testCuttingRope();
+//        testCuttingRope();
+        testDictionaryCut();
 
+    }
+
+    private static void testDictionaryCut() {
+        String s = "bobbycatrob";
+        Set<String> dictionary = new HashSet<>();
+        dictionary.add("bobby");
+        dictionary.add("cat");
+        dictionary.add("rob");
+        System.out.println(DictionaryCut.checkContains(s, dictionary));
     }
 
     private static void testCuttingRope() {
