@@ -16,6 +16,5 @@ public class DictionaryCut {
                 }
             }
         }
-        return m[input.length()];
     }
 }
