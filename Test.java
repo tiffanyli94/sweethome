@@ -43,6 +43,29 @@ public class Test {
 
     private static void test(int b) {
         System.out.println("b = " + b);
+
+        // testNQueen();
+
+       //testFib();
+        testFib4();
+
+
+    }
+    private static void testFib4() {
+        int i = 10;
+        System.out.print(Fib.getFib4(i));
+    }
+
+    private static void testFib3() {
+        int i = 10;
+        System.out.print(Fib.getFib3(i));
+    }
+
+    private static void testFib() {
+        int i = 10;
+        int[] m = new int[i + 1];
+        System.out.println(Fib.getFib2(i, m));
+>>>>>>> 6d250b669de8f8729e98d3d33357c93b21e420a0
     }
 
     private static void testNQueen() {
