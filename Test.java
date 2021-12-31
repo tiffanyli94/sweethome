@@ -27,8 +27,22 @@ public class Test {
        // testRemoveChar();
         //testRemoveDuplicate();
        // testSubString();
-        testNQueen();
+//        testNQueen();
 
+//        StringBuilder sb = new StringBuilder();
+//        sb.append("1");
+
+        testQuickSort();
+
+    }
+
+    private static void testQuickSort() {
+        int[] test = new int[]{3,3,3,3,3};
+        System.out.println(QuickSort.quickSort(test));
+    }
+
+    private static void test(int b) {
+        System.out.println("b = " + b);
     }
 
     private static void testNQueen() {
