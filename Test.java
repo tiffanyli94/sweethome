@@ -25,7 +25,7 @@ public class Test {
 //        testTopKWords();
 
        // testRemoveChar();
-        //testRemoveDuplicate();
+
         //testSubString();
        // testReverseWords();
 //        testReverseEach();
@@ -46,6 +46,57 @@ public class Test {
         String s = ("176321235311353212384");
         System.out.println(LongestPalindrome.longestPalindrome(s));
     }
+
+       // testSubString();
+//        testNQueen();
+
+//        StringBuilder sb = new StringBuilder();
+//        sb.append("1");
+
+        testQuickSort();
+
+    }
+
+    private static void testQuickSort() {
+        int[] test = new int[]{3,3,3,3,3};
+        System.out.println(QuickSort.quickSort(test));
+    }
+
+    private static void test(int b) {
+        System.out.println("b = " + b);
+
+        // testNQueen();
+
+       //testFib();
+        testFib4();
+
+
+    }
+    private static void testFib4() {
+        int i = 10;
+        System.out.print(Fib.getFib4(i));
+    }
+
+    private static void testFib3() {
+        int i = 10;
+        System.out.print(Fib.getFib3(i));
+    }
+
+    private static void testFib() {
+        int i = 10;
+        int[] m = new int[i + 1];
+        System.out.println(Fib.getFib2(i, m));
+    }
+
+    private static void testNQueen() {
+        List<List<Integer>> solution = NQueen.NQueen(8);
+        for (int i = 0; i < solution.size(); i++) {
+            for (int j = 0; j < solution.get(i).size(); j++) {
+                System.out.print(solution.get(i).get(j));
+            }
+            System.out.println(" ");
+        }
+
 
     private static void testReverseEach() {
         char[] test = {'h', 'i', ' ', 'm', 'y', ' ', 'd', 'o', 'g'};
