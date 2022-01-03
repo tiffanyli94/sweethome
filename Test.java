@@ -25,7 +25,28 @@ public class Test {
 //        testTopKWords();
 
        // testRemoveChar();
-        //testRemoveDuplicate();
+
+        //testSubString();
+       // testReverseWords();
+//        testReverseEach();
+//        testLP();
+        testAnagram();
+    }
+
+    private static void testAnagram() {
+        String s = ("abccbab");
+        String anagram = "ab";
+        List<Integer> result = Anagram.findAnagrams(s, anagram);
+        for (int r : result) {
+            System.out.println(r);
+        }
+    }
+
+    private static void testLP() {
+        String s = ("176321235311353212384");
+        System.out.println(LongestPalindrome.longestPalindrome(s));
+    }
+
        // testSubString();
 //        testNQueen();
 
@@ -65,7 +86,6 @@ public class Test {
         int i = 10;
         int[] m = new int[i + 1];
         System.out.println(Fib.getFib2(i, m));
->>>>>>> 6d250b669de8f8729e98d3d33357c93b21e420a0
     }
 
     private static void testNQueen() {
@@ -78,6 +98,20 @@ public class Test {
         }
 
 
+    private static void testReverseEach() {
+        char[] test = {'h', 'i', ' ', 'm', 'y', ' ', 'd', 'o', 'g'};
+        ReverseEachWord.reverseEachWord(test);
+        for (int i = 0; i < test.length; i++) {
+            System.out.print(test[i]);
+        }
+    }
+
+    private static void testReverseWords() {
+        char[] test = {'a', 'b', 'c', 'd', 'e', 'f'};
+        ReverseWords.reverseWord(test, 2, 4);
+        for (int i = 0; i < test.length; i++) {
+            System.out.print(test[i]);
+        }
     }
 
     private static void testSubString() {
