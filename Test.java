@@ -28,8 +28,23 @@ public class Test {
         //testRemoveDuplicate();
         //testSubString();
        // testReverseWords();
-        testReverseEach();
+//        testReverseEach();
+//        testLP();
+        testAnagram();
+    }
 
+    private static void testAnagram() {
+        String s = ("abccbab");
+        String anagram = "ab";
+        List<Integer> result = Anagram.findAnagrams(s, anagram);
+        for (int r : result) {
+            System.out.println(r);
+        }
+    }
+
+    private static void testLP() {
+        String s = ("176321235311353212384");
+        System.out.println(LongestPalindrome.longestPalindrome(s));
     }
 
     private static void testReverseEach() {
